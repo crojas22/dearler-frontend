@@ -9,7 +9,9 @@ const FullPageModal = props => {
                 props.active ?
                     <div className="modal" onClick={props.clickOut}>
                         <div className="content">
-                            <props.InnerComponent info={props.info} id={props.carInfo.id}/>
+                            {
+                                props.InnerComponent
+                            }
                         </div>
                     </div>
                     : null

@@ -9,10 +9,9 @@ const app = express();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(compression());
 
 const router = express.Router();
-
-app.use(compression());
 
 router.use(express.static(
     path.resolve(__dirname, '..', 'build')

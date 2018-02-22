@@ -8,7 +8,7 @@ const Alert = props => (
                     props.message
                 }
             </span>
-            <button type="button" className="close" onClick={props.clickHandle}>
+            <button type="button" className="close" onClick={() => props.clickHandle(props.alert)}>
                 <span aria-hidden="true">&times;</span>
             </button>
         </div>

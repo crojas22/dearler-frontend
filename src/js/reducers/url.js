@@ -1,6 +1,6 @@
 import { ADD_TO_URL, REMOVE_FROM_URL, RESET_URL } from "../types/actionTypes";
 
-export const inventorySearchURL = (state=["http://localhost:8080/api/v1/vehicles?"], action) => {
+export const inventorySearchURL = (state=["v1/vehicles?"], action) => {
     switch (action.type) {
         case ADD_TO_URL:
             return action.payload;

@@ -699,7 +699,7 @@ button:focus {
   padding: 1rem;
   position: fixed;
   bottom: 1rem;
-  left: 50%;
+  left: 45%;
   z-index: 2000;
   visibility: hidden; }
   .inventory .snack-bar.show,

@@ -13,13 +13,15 @@ import { SnackBar } from "./reusables/SnakBar";
 import Calculator from "./individualCar/Calculator";
 import Navigation from "./Navigation";
 import Footer from "./reusables/Footer";
+import { sendDataApi } from "../api";
 
 class IndividualCarPage extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             currentTabActive: "Vehicle Features",
-            showAlert: false,
+            showAlert1: false,
+            showAlert2: false,
             success: false,
             message: "",
             result: null
@@ -27,11 +29,12 @@ class IndividualCarPage extends React.Component {
         this.changeTab = this.changeTab.bind(this);
         this.changeMainPic = this.changeMainPic.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.resetAlert = this.resetAlert.bind(this);
     }
 
     componentDidMount() {
         this.props.fetchData(
-            `http://localhost:8080/api/v1/vehicles/${this.props.match.params.car}?projection=features`, 'GET', "CAR_INFO"
+            `v1/vehicles/${this.props.match.params.car}?projection=features`, 'GET', "CAR_INFO"
         );
         window.scrollTo(0,0);
     }
@@ -40,14 +43,11 @@ class IndividualCarPage extends React.Component {
         document.querySelector(".main-pic").attributes.src.value = event.target.attributes.src.value;
     }
 
-    handleSubmit(data, id) {
-        fetch(`http://localhost:8080/api/v1/add/inquiries/${id}`, {
-            method: "POST",
-            body: JSON.stringify(data),
-            headers: new Headers({'Content-Type': 'application/json'})
-        }).then(resp => {
-            if (resp.status === 201) this.setState({showAlert: true, success: true, message: "Success!! Message sent"});
-            else this.setState({showAlert: true, success: false, message: "Sorry, something went wrong"});
+    handleSubmit(url, data, method, alert, success, failed) {
+        sendDataApi(url, data, method)
+            .then(resp => {
+            if (resp.status === 201) this.setState({[alert]: true, success: true, message: success});
+            else this.setState({[alert]: true, success: false, message: failed});
         });
     }
 
@@ -56,9 +56,13 @@ class IndividualCarPage extends React.Component {
         this.setState({currentTabActive: e.target.innerHTML})
     }
 
+    resetAlert(alert) {
+        this.setState({[alert]: false, message: ""})
+    }
+
     render() {
         const {carManufacturer, year, model, pictureAddress, price, exteriorColor, interiorColor, vinNumber, picture2,
-            picture3, picture4, bodyType, mileage, fuelType, transmissionType, wheelDrive, features, id} = this.props.info;
+            picture3, picture4, bodyType, mileage, fuelType, transmissionType, wheelDrive, features} = this.props.info;
         const title = `${year} ${carManufacturer} ${model}`;
         return(
             <div>
@@ -72,8 +76,10 @@ class IndividualCarPage extends React.Component {
                                     title
                                 }
                             </h4>
-                            <FullPageModal info={title} InnerComponent={TestDrive} compare={this.props.compare}
-                                           TriggerComponent={RenderCarInfoLinks} id={id} carInfo={this.props.info} setData={this.props.setData}/>
+                            <FullPageModal compare={this.props.compare} TriggerComponent={RenderCarInfoLinks} carInfo={this.props.info}
+                                           InnerComponent={<TestDrive {...this.state} info={title} id={this.props.info.id}
+                                                                      submit={this.handleSubmit} clickHandle={this.resetAlert}/>}
+                                           setData={this.props.setData} />
                             <div>
                                 <div>
                                     <img className="main-pic img-fluid w-100" src={pictureAddress} alt={carManufacturer}/>
@@ -105,7 +111,7 @@ class IndividualCarPage extends React.Component {
                                         renderFeatures(features, "row flex-wrap", "col-sm-4 px-0 pt-2") :
                                         this.state.currentTabActive === "Contact" ?
                                             <ContactForm info={this.props.info} submit={this.handleSubmit} {...this.state}
-                                                         clickHandle={() => this.setState({showAlert: false, message: ""})}/> : null
+                                                         clickHandle={this.resetAlert}/> : null
                                 }
                             </div>
                         </div>

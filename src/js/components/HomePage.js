@@ -22,7 +22,7 @@ class HomePage extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchDataAction("http://localhost:8080/api/v1/home/inventory?page=0&size=6", "GET");
+        this.props.fetchDataAction("v1/home/inventory?page=0&size=6", "GET");
         fetchDataFunction(this.props.url, this.props.sort.sortBy, this.props.sort.direction, this.props.fetchData);
     }
 
