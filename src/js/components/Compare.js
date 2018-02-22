@@ -3,6 +3,8 @@ import { connect } from "react-redux";
 import { RenderBreadcrumps } from "./reusables/RenderLinks";
 import CompareColumn from "./compare/CompareColumn";
 import CompareTop from "./compare/CompareTop";
+import Navigation from "./Navigation";
+import Footer from "./reusables/Footer";
 
 const Compare = ({compareArray}) => {
     const renderEmpty = (Component) => {
@@ -32,37 +34,41 @@ const Compare = ({compareArray}) => {
     };
 
     return(
-        <div className="compare container-fluid px-lg-5">
-            <RenderBreadcrumps title="Compare"/>
-            <div className="row">
-                <div className="col-sm-3 col-md-3 d-none d-sm-flex align-items-sm-center">
-                    <h5>
-                        COMPARE
-                        <br/>
-                        VEHICLES
-                    </h5>
+        <div>
+            <Navigation/>
+            <div className="compare container-fluid px-lg-5">
+                <RenderBreadcrumps title="Compare"/>
+                <div className="row">
+                    <div className="col-sm-3 col-md-3 d-none d-sm-flex align-items-sm-center">
+                        <h5>
+                            COMPARE
+                            <br/>
+                            VEHICLES
+                        </h5>
+                    </div>
+                    {
+                        compareArray.map(each => (
+                            <div key={each.id} className="col-sm-3 col-md-3">
+                                <CompareTop {...each} classes="compare-column d-none d-sm-block"/>
+                            </div>
+                        ))
+                    }
+                    {
+                        renderEmptyTop(CompareTop)
+                    }
                 </div>
-                {
-                    compareArray.map(each => (
-                        <div key={each.id} className="col-sm-3 col-md-3">
-                            <CompareTop {...each} classes="compare-column d-none d-sm-block"/>
-                        </div>
-                    ))
-                }
-                {
-                    renderEmptyTop(CompareTop)
-                }
+                <div className="row">
+                    <CompareInfo
+                        array={["MAKE", "MODEL", "BODY", "YEAR", "FUEL TYPE", "TRANSMISSION", "DRIVE", "EXTERIOR COLOR", "INTERIOR COLOR", "MILEAGE", "VIN"]}/>
+                    {
+                        compareArray.map(each => <CompareColumn key={each.id} {...each} />)
+                    }
+                    {
+                        renderEmpty(CompareColumn)
+                    }
+                </div>
             </div>
-            <div className="row">
-                <CompareInfo
-                    array={["MAKE", "MODEL", "BODY", "YEAR", "FUEL TYPE", "TRANSMISSION", "DRIVE", "EXTERIOR COLOR", "INTERIOR COLOR", "MILEAGE", "VIN"]}/>
-                {
-                    compareArray.map(each => <CompareColumn key={each.id} {...each} />)
-                }
-                {
-                    renderEmpty(CompareColumn)
-                }
-            </div>
+            <Footer/>
         </div>
     )
 };

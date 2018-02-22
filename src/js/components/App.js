@@ -1,16 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Loadable from 'react-loadable';
 
-const Loading = () => <div>Loading...</div>;
+const Loading = () => <div className="wrapper d-flex justify-content-center align-items-center"><div className="loader"></div></div>;
 
 const HomePage = Loadable({
     loader: () => import('./HomePage'),
-    loading: Loading
-});
-
-const Navigation = Loadable({
-    loader: () => import("./Navigation"),
     loading: Loading
 });
 
@@ -29,12 +24,7 @@ const Compare = Loadable({
     loading: Loading
 });
 
-const Footer = Loadable({
-    loader: () => import("./reusables/Footer"),
-    loading: Loading
-});
-
-class App extends Component {
+class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -64,18 +54,14 @@ class App extends Component {
 
     render() {
         return(
-            <div>
-                <Navigation/>
-                <Switch>
-                    <Route exact path='/' component={HomePage}/>
-                    <Route exact path='/inventory' render={
-                        () => (<Inventory {...this.state} changePage={this.changePageNumber} resetPage={this.resetPage}/>)
-                    }/>
-                    <Route path='/inventory/:car' render={props => (<IndividualCarPage {...props}/>)}/>
-                    <Route path="/compare" component={Compare}/>
-                </Switch>
-                <Footer />
-            </div>
+            <Switch>
+                <Route exact path='/' component={HomePage}/>
+                <Route exact path='/inventory' render={
+                    () => (<Inventory {...this.state} changePage={this.changePageNumber} resetPage={this.resetPage}/>)
+                }/>
+                <Route path='/inventory/:car' render={props => (<IndividualCarPage {...props}/>)}/>
+                <Route path="/compare" component={Compare}/>
+            </Switch>
         );
     }
 }

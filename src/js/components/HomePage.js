@@ -9,6 +9,8 @@ import SpecialsCarousel from "./homepage/SpecialsCarousel";
 import BackgroundSellBuy from "./homepage/BackgroundSellBuy";
 import { fetchData, fetchDataAction } from "../actions";
 import { fetchDataFunction, windowTop } from "../functions/HelperFunctions";
+import Navigation from "./Navigation";
+import Footer from "./reusables/Footer";
 
 class HomePage extends React.Component {
     constructor(props) {
@@ -32,6 +34,7 @@ class HomePage extends React.Component {
     render() {
         return(
             <div>
+                <Navigation/>
                 <div className="image-background">
                 </div>
                 <div className="welcome container-fluid">
@@ -59,6 +62,7 @@ class HomePage extends React.Component {
                 <SpecialsCarousel newCars={this.props.newCars}/>
                 <WhyUs/>
                 <BackgroundSellBuy />
+                <Footer />
             </div>
         )
     }

@@ -15,6 +15,8 @@ import {
     UPDATE_INVENTORY_SORT
 } from "../types/actionTypes";
 import { SnackBar } from "./reusables/SnakBar";
+import Footer from "./reusables/Footer";
+import Navigation from "./Navigation";
 
 class Inventory extends React.Component {
     componentDidMount() {
@@ -40,98 +42,102 @@ class Inventory extends React.Component {
 
     render() {
         return(
-            <div className="inventory">
-                <div>
-                    <h2 className="text-white p-3 px-xl-5">Inventory</h2>
-                </div>
-                <div className="container-fluid px-xl-5">
-                    <div className="row">
-                        <div className="search-options col-lg-3">
+            <div>
+                <Navigation/>
+                <div className="inventory">
+                    <div>
+                        <h2 className="text-white p-3 px-xl-5">Inventory</h2>
+                    </div>
+                    <div className="container-fluid px-xl-5">
+                        <div className="row">
+                            <div className="search-options col-lg-3">
 
-                            <SearchOptions array={this.props.inventory} resetPage={this.props.resetPage}/>
+                                <SearchOptions array={this.props.inventory} resetPage={this.props.resetPage}/>
 
-                        </div>
-                        <div className="col-lg-9 col-sm-12">
-                            <div className=" d-sm-flex mt-4 justify-content-sm-between align-items-center">
-                                <div className="v-available mb-3 mb-sm-0">
-                                    <span>{this.props.inventory.length} </span>VEHICLES AVAILABLE
-                                </div>
-                                <div className="filter-search-icon d-flex justify-content-between align-items-center">
-                                    <div className="mr-sm-3">
-                                        <SelectOptions
-                                            selectRefVal={input => this._filter = input}
-                                            options={["Date: newest first","Date: oldest first","Price: lowest first", "Price: highest first"]}
-                                            selectOnChange={() => this.sortInventory()}/>
-                                    </div>
-                                    <div>
-                                        <FaThLarge size={30} color={(this.props.layout ? "black":null)}
-                                                   onClick={() => this.props.setData(true, UPDATE_INVENTORY_LAYOUT)}/>
-
-                                        <FaThList size={30} color={(!this.props.layout ? "black":null)}
-                                                  onClick={() => this.props.setData(false, UPDATE_INVENTORY_LAYOUT)}/>
-                                    </div>
-                                </div>
                             </div>
-                            <div className="d-flex pb-4 border-bottom flex-wrap justify-content-center justify-content-sm-start">
-                                {
-                                    this.props.optionsSelected.length > 0 ?
-                                        this.props.optionsSelected.map((each, index, arr) => {
-                                            if (each != null) {
-                                                return(
-                                                    <div className="options-selected d-flex py-2 pl-2 bg-light mt-4 mr-2" key={each.value}>
-                                                        <div>
+                            <div className="col-lg-9 col-sm-12">
+                                <div className=" d-sm-flex mt-4 justify-content-sm-between align-items-center">
+                                    <div className="v-available mb-3 mb-sm-0">
+                                        <span>{this.props.inventory.length} </span>VEHICLES AVAILABLE
+                                    </div>
+                                    <div className="filter-search-icon d-flex justify-content-between align-items-center">
+                                        <div className="mr-sm-3">
+                                            <SelectOptions
+                                                selectRefVal={input => this._filter = input}
+                                                options={["Date: newest first","Date: oldest first","Price: lowest first", "Price: highest first"]}
+                                                selectOnChange={() => this.sortInventory()}/>
+                                        </div>
+                                        <div>
+                                            <FaThLarge size={30} color={(this.props.layout ? "black":null)}
+                                                       onClick={() => this.props.setData(true, UPDATE_INVENTORY_LAYOUT)}/>
+
+                                            <FaThList size={30} color={(!this.props.layout ? "black":null)}
+                                                      onClick={() => this.props.setData(false, UPDATE_INVENTORY_LAYOUT)}/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="d-flex pb-4 border-bottom flex-wrap justify-content-center justify-content-sm-start">
+                                    {
+                                        this.props.optionsSelected.length > 0 ?
+                                            this.props.optionsSelected.map((each, index, arr) => {
+                                                if (each != null) {
+                                                    return(
+                                                        <div className="options-selected d-flex py-2 pl-2 bg-light mt-4 mr-2" key={each.value}>
+                                                            <div>
                                                             <span className="mr-1 text-muted">
                                                                 {
                                                                     each.key
                                                                 }:
                                                             </span>
-                                                                    <span>
+                                                                <span>
                                                                 {
                                                                     each.value
                                                                 }
                                                             </span>
+                                                            </div>
+                                                            <div className="ml-1 px-2" onClick={() => {
+                                                                let uri = [...this.props.url],
+                                                                    selectedOptions = [...arr];
+                                                                uri[each.index] = null;
+                                                                selectedOptions[each.index] = null;
+                                                                this.props.setData(uri, REMOVE_FROM_URL);
+                                                                this.props.setData(selectedOptions, REMOVE_OPTIONS_SELECTED);
+                                                                this.props.searchOptionStatus(false, each.selectedType);
+                                                                fetchDataFunction(uri, this.props.sort.sortBy, this.props.sort.direction, this.props.fetchData)}}>
+                                                                X
+                                                            </div>
                                                         </div>
-                                                        <div className="ml-1 px-2" onClick={() => {
-                                                            let uri = [...this.props.url],
-                                                                selectedOptions = [...arr];
-                                                            uri[each.index] = null;
-                                                            selectedOptions[each.index] = null;
-                                                            this.props.setData(uri, REMOVE_FROM_URL);
-                                                            this.props.setData(selectedOptions, REMOVE_OPTIONS_SELECTED);
-                                                            this.props.searchOptionStatus(false, each.selectedType);
-                                                            fetchDataFunction(uri, this.props.sort.sortBy, this.props.sort.direction, this.props.fetchData)}}>
-                                                            X
-                                                        </div>
-                                                    </div>
+                                                    )
+                                                }
+                                            })
+                                            :
+                                            null
+                                    }
+                                </div>
+                                {
+                                    this.props.layout ?
+                                        <div className="row">
+                                            {
+                                                renderCarListing(
+                                                    sliceArray(this.props.inventory, this.props.pageNumber, this.props.perPage),
+                                                    "col-xl-3 col-md-4 col-sm-6 mt-4 pt-1 mb-1", "home-listing"
                                                 )
                                             }
-                                        })
-                                        :
-                                        null
+                                        </div>
+                                        : renderVerticalListing(sliceArray(this.props.inventory, this.props.pageNumber, this.props.perPage))
+                                }
+                                {
+                                    <div className="render-nav-links my-4 text-center">
+                                        <PaginationLinks perPage={this.props.perPage} pageNumber={this.props.pageNumber}
+                                                         arrayLength={this.props.inventory.length} changePage={this.props.changePage}/>
+                                    </div>
                                 }
                             </div>
-                            {
-                                this.props.layout ?
-                                    <div className="row">
-                                        {
-                                            renderCarListing(
-                                                sliceArray(this.props.inventory, this.props.pageNumber, this.props.perPage),
-                                                "col-xl-3 col-md-4 col-sm-6 mt-4 pt-1 mb-1", "home-listing"
-                                            )
-                                        }
-                                    </div>
-                                    : renderVerticalListing(sliceArray(this.props.inventory, this.props.pageNumber, this.props.perPage))
-                            }
-                            {
-                                <div className="render-nav-links my-4 text-center">
-                                    <PaginationLinks perPage={this.props.perPage} pageNumber={this.props.pageNumber}
-                                                     arrayLength={this.props.inventory.length} changePage={this.props.changePage}/>
-                                </div>
-                            }
                         </div>
                     </div>
+                    <SnackBar message={this.props.snackBar.message} show={this.props.snackBar.show}/>
                 </div>
-                <SnackBar message={this.props.snackBar.message} show={this.props.snackBar.show}/>
+                <Footer/>
             </div>
         )
     }
