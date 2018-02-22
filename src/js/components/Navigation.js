@@ -2,7 +2,7 @@ import React from 'react';
 import PhoneContactInfo from "./navigation/PhoneContactInfo";
 import AddressInfo from "./navigation/AddressInfo";
 import { BtnInput } from "./reusables/Buttons";
-import { NavLink } from "react-router-dom";
+import { NavLink, withRouter } from "react-router-dom";
 import OnOff from "../hoc/OnOff";
 import { connect } from "react-redux";
 import MdViewCarousel from "react-icons/lib/md/view-carousel";
@@ -55,4 +55,4 @@ const mapStateToProps = state => {
     }
 };
 
-export default OnOff(connect(mapStateToProps, null , null, {pure:false})(Navigation));
+export default withRouter(connect(mapStateToProps,null)(OnOff(Navigation)));

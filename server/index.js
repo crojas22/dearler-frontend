@@ -1,20 +1,27 @@
 const express = require('express');
 const config = require('./config');
 const bodyParser = require("body-parser");
+const compression = require('compression');
 const path = require("path");
-const universal = require("./universal");
-const index = require("./routes/index");
+const serverRenderer = require("./serverRender");
 
 const app = express();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.use("/", index);
+const router = express.Router();
 
-app.use(express.static(path.resolve(__dirname, "..", "public")));
+app.use(compression());
 
-app.use("/", universal);
+router.use(express.static(
+    path.resolve(__dirname, '..', 'build')
+));
+
+router.use('^/$', serverRenderer);
+router.use('*', serverRenderer);
+
+app.use(router);
 
 
 app.listen(config.port, config.host, () => console.info(`Express is listening on port ${config.port}`));

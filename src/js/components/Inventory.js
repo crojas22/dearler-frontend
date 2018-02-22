@@ -116,7 +116,7 @@ class Inventory extends React.Component {
                                         {
                                             renderCarListing(
                                                 sliceArray(this.props.inventory, this.props.pageNumber, this.props.perPage),
-                                                "col-xl-3 col-md-4 col-sm-6 mt-4 pt-1 mb-3", "home-listing"
+                                                "col-xl-3 col-md-4 col-sm-6 mt-4 pt-1 mb-1", "home-listing"
                                             )
                                         }
                                     </div>

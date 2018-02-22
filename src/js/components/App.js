@@ -1,11 +1,38 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import HomePage from "./HomePage";
-import Navigation from "./Navigation";
-import Inventory from "./Inventory";
-import Footer from "./reusables/Footer";
-import IndividualCarPage from "./IndividualCarPage";
-import Compare from "./Compare";
+import Loadable from 'react-loadable';
+
+const Loading = () => <div>Loading...</div>;
+
+const HomePage = Loadable({
+    loader: () => import('./HomePage'),
+    loading: Loading
+});
+
+const Navigation = Loadable({
+    loader: () => import("./Navigation"),
+    loading: Loading
+});
+
+const Inventory = Loadable({
+    loader: () => import("./Inventory"),
+    loading: Loading
+});
+
+const IndividualCarPage = Loadable({
+    loader: () => import("./IndividualCarPage"),
+    loading: Loading
+});
+
+const Compare = Loadable({
+    loader: () => import("./Compare"),
+    loading: Loading
+});
+
+const Footer = Loadable({
+    loader: () => import("./reusables/Footer"),
+    loading: Loading
+});
 
 class App extends Component {
     constructor(props) {
@@ -40,12 +67,12 @@ class App extends Component {
             <div>
                 <Navigation/>
                 <Switch>
-                    <Route exact path='/' render={() => <HomePage />}/>
+                    <Route exact path='/' component={HomePage}/>
                     <Route exact path='/inventory' render={
                         () => (<Inventory {...this.state} changePage={this.changePageNumber} resetPage={this.resetPage}/>)
                     }/>
-                    <Route exact path='/inventory/:car' render={props => (<IndividualCarPage {...props}/>)}/>
-                    <Route exact path="/compare" render={() => <Compare /> }/>
+                    <Route path='/inventory/:car' render={props => (<IndividualCarPage {...props}/>)}/>
+                    <Route path="/compare" component={Compare}/>
                 </Switch>
                 <Footer />
             </div>
