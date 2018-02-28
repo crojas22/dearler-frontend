@@ -1,7 +1,6 @@
 import React from 'react';
 import Navigation from "./Navigation";
 import Footer from "./reusables/Footer";
-import { RenderBreadcrumps } from "./reusables/RenderLinks";
 import { TitleSeparator } from "./reusables/Div";
 import MdDirectionsCar from 'react-icons/lib/md/directions-car';
 import MdEventSeat from 'react-icons/lib/md/event-seat';
@@ -53,7 +52,6 @@ const TradeIn = ({changeTab, tab, getValue, accident, interior, exterior, submit
                     <h2 className="text-white p-3 px-xl-5">Sell Your Vehicle</h2>
                 </div>
                 <div className="container-fluid px-xl-5">
-                    {/*<RenderBreadcrumps title2="inventory" title="Trade-in"/>*/}
                     <div className="row">
                         <div className="col-lg-4">
                             <div className="mb-4">

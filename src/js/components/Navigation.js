@@ -33,11 +33,11 @@ const Navigation = ({clickHandle, active, compareArray, clickDropDown, dropDown}
                         <NavLink to="/inventory" className="nav-link btn rounded-0 p-3 font-weight-bold">Inventory</NavLink>
                         <li className="nav-item dropdown" onClick={() => clickDropDown("dropDown")} >
                             <a className="dropdown-toggle nav-link btn rounded-0 p-3 font-weight-bold">Financing</a>
-                            <div className={"bg-grey dropdown-menu p-0 m-0 border-0 rounded-0 " + (dropDown?"d-block":"")}>
-                                <NavLink to="/financing/application" className="nav-link p-3 " href="#">
-                                    Credit Application
+                            <div className={"bg-light dropdown-menu p-0 m-0 border-0 rounded-0 " + (dropDown?"d-block":"")}>
+                                <NavLink to="/financing/pre-approval" className="nav-link p-3 border-top">
+                                    Application
                                 </NavLink>
-                                <NavLink to="/financing/trade-in" className="nav-link p-3" href="#">
+                                <NavLink to="/financing/trade-in" className="nav-link p-3 border-top border-bottom">
                                     Sell vehicle
                                 </NavLink>
                             </div>

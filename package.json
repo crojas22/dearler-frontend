@@ -65,10 +65,11 @@
     "build-css": "node-sass-chokidar src/styles/scss/index.scss -o src/styles/css",
     "watch-css": "npm run build-css && node-sass-chokidar src/styles/scss/index.scss -o src/styles/css --watch --recursive",
     "start-js": "node scripts/start.js",
-    "start": "npm-run-all -p watch-css start-js",
+    "react": "npm-run-all -p watch-css start-js",
     "build": "npm run build-css && node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
-    "server": "nodemon --exec node ./server/bootstrap.js --ignore public/"
+    "server": "nodemon --exec node ./server/bootstrap.js --ignore public/",
+    "start": "node ./server/bootstrap.js"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -111,5 +112,8 @@
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "engines": {
+    "node": "9.4.0"
   }
 }
