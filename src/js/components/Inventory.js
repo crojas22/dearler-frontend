@@ -45,7 +45,7 @@ class Inventory extends React.Component {
             <div>
                 <Navigation/>
                 <div className="inventory">
-                    <div>
+                    <div className="img">
                         <h2 className="text-white p-3 px-xl-5">Inventory</h2>
                     </div>
                     <div className="container-fluid px-xl-5">

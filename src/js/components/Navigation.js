@@ -7,7 +7,7 @@ import OnOff from "../hoc/OnOff";
 import { connect } from "react-redux";
 import MdViewCarousel from "react-icons/lib/md/view-carousel";
 
-const Navigation = ({clickHandle, active, compareArray}) => {
+const Navigation = ({clickHandle, active, compareArray, clickDropDown, dropDown}) => {
     const counter = compareArray.length;
     return(
         <nav className="navigation">
@@ -31,6 +31,17 @@ const Navigation = ({clickHandle, active, compareArray}) => {
                     <ul className="navbar-nav">
                         <NavLink exact to="/" className="nav-link btn rounded-0 p-3 font-weight-bold">Home</NavLink>
                         <NavLink to="/inventory" className="nav-link btn rounded-0 p-3 font-weight-bold">Inventory</NavLink>
+                        <li className="nav-item dropdown" onClick={() => clickDropDown("dropDown")} >
+                            <a className="dropdown-toggle nav-link btn rounded-0 p-3 font-weight-bold">Financing</a>
+                            <div className={"bg-grey dropdown-menu p-0 m-0 border-0 rounded-0 " + (dropDown?"d-block":"")}>
+                                <NavLink to="/financing/application" className="nav-link p-3 " href="#">
+                                    Credit Application
+                                </NavLink>
+                                <NavLink to="/financing/trade-in" className="nav-link p-3" href="#">
+                                    Sell vehicle
+                                </NavLink>
+                            </div>
+                        </li>
                     </ul>
                     <ul>
                         <NavLink to="/compare" className="btn d-block rounded-0 py-md-2 py-2 pl-3 pr-2">

@@ -4,11 +4,13 @@ import FaMoney from 'react-icons/lib/fa/money';
 import FaThumbsOUp from 'react-icons/lib/fa/thumbs-o-up';
 import FaWrench from 'react-icons/lib/fa/wrench';
 import { BtnLink } from "../reusables/Buttons";
+import { TitleSeparator } from "../reusables/Div";
 
 const WhyUs = () => (
     <div className="why-us container-fluid py-4 bg-light px-lg-5">
-        <div className="text-center">
-            <h2 className="font-weight-bold mb-lg-5">WHY CHOOSE US</h2>
+        <div className="text-center mb-lg-5">
+            <h2 className="font-weight-bold mt-3">WHY CHOOSE US</h2>
+            <TitleSeparator/>
         </div>
         <div className="row">
             <div className="col-md-3 d-lg-flex mb-2">

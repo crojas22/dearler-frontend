@@ -24,6 +24,11 @@ const Compare = Loadable({
     loading: Loading
 });
 
+const TradeIn = Loadable({
+    loader: () => import("./TradeIn"),
+    loading: Loading
+});
+
 class App extends React.Component {
     constructor(props) {
         super(props);
@@ -60,6 +65,7 @@ class App extends React.Component {
                     () => (<Inventory {...this.state} changePage={this.changePageNumber} resetPage={this.resetPage}/>)
                 }/>
                 <Route path='/inventory/:car' render={props => (<IndividualCarPage {...props}/>)}/>
+                <Route path="/financing/trade-in" component={TradeIn}/>
                 <Route path="/compare" component={Compare}/>
             </Switch>
         );

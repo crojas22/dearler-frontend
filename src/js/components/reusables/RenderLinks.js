@@ -18,10 +18,10 @@ export const RenderLinks = ({links, classUL, classA, clickHandle, active}) => (
     </ul>
 );
 
-export const RenderBreadcrumps = ({title}) => (
+export const RenderBreadcrumps = ({title, title2}) => (
     <ol className="bread pl-0 py-3 d-flex my-3">
         <li className="breadcrumb-item"><NavLink to="/">Home</NavLink></li>
-        <li className="breadcrumb-item"><NavLink to="/inventory">Inventory</NavLink></li>
+        <li className="breadcrumb-item"><NavLink to={"/"+title2}>{title2}</NavLink></li>
         <li className="breadcrumb-item"><a >{title}</a></li>
     </ol>
 );

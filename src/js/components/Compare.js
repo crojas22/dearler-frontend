@@ -37,7 +37,7 @@ const Compare = ({compareArray}) => {
         <div>
             <Navigation/>
             <div className="compare container-fluid px-lg-5">
-                <RenderBreadcrumps title="Compare"/>
+                <RenderBreadcrumps title="Compare" title2="inventory"/>
                 <div className="row">
                     <div className="col-sm-3 col-md-3 d-none d-sm-flex align-items-sm-center">
                         <h5>

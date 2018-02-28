@@ -1,6 +1,7 @@
 import React from 'react';
 import { renderCarListing } from "../../functions/HelperFunctions";
 import { NavControls } from "../reusables/NavControls";
+import { TitleSeparator } from "../reusables/Div";
 
 class SpecialsCarousel extends React.Component {
     constructor(props) {
@@ -76,6 +77,7 @@ class SpecialsCarousel extends React.Component {
                 <div>
                     <h3 className="text-white text-center mb-4">
                         SPECIALS
+                        <TitleSeparator/>
                     </h3>
                 </div>
                 <div className="row d-flex vertical-align-center flex-nowrap">

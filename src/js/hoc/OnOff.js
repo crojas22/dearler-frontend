@@ -5,11 +5,17 @@ const OnOff = (InnerComponent) => {
         constructor(props) {
             super(props);
             this.state = {
-                active: false
+                active: false,
+                dropDown: false
             };
             this.clickOnOff = this.clickOnOff.bind(this);
             this.clickOut = this.clickOut.bind(this);
             this.clickIn = this.clickIn.bind(this);
+            this.updateDropDown = this.updateDropDown.bind(this);
+        }
+
+        updateDropDown(dropDown) {
+            this.setState({[dropDown] : !this.state[dropDown]})
         }
 
         clickOnOff() {
@@ -27,7 +33,7 @@ const OnOff = (InnerComponent) => {
         render() {
             return(
                 <InnerComponent {...this.props} {...this.state} clickHandle={this.clickOnOff} clickOut={this.clickOut}
-                                clickIn={this.clickIn}/>
+                                clickIn={this.clickIn} clickDropDown={this.updateDropDown}/>
             )
         }
 

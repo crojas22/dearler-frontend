@@ -1,0 +1,15 @@
+.separator {
+  .first,
+  .second {
+    display: inline-block;
+    background-color: $primary-color;
+    transform: skew(-50deg,0deg);
+    border-radius: 2px;
+  }
+  .first {
+    @include height-width(0.4rem, 3rem);
+  }
+  .second {
+    @include height-width(0.4rem, 1.5rem);
+  }
+}

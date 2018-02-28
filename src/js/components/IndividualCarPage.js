@@ -68,7 +68,7 @@ class IndividualCarPage extends React.Component {
             <div>
                 <Navigation/>
                 <div className="individual-car-page container-fluid px-md-5">
-                    <RenderBreadcrumps title={title}/>
+                    <RenderBreadcrumps title={title} title2="inventory"/>
                     <div className="row">
                         <div className="col-lg-8">
                             <h4 className="pt-2">

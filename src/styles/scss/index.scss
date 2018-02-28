@@ -19,6 +19,8 @@
 @import "reusable/fullpagemodal";
 @import "compare";
 @import "reusable/snackbar";
+@import "tradein";
+@import "reusable/separator";
 
 * {
   margin: 0; padding: 0; box-sizing: border-box;
@@ -39,6 +41,7 @@ a:hover {
 
 a {
   color: black;
+  white-space: nowrap;
 }
 
 .bg-grey {

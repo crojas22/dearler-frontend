@@ -1,27 +1,4 @@
 .inventory {
-  & > div:first-child {
-    background-size: cover;
-    background: rgba(0,0,0,0.5);
-    position: relative;
-    height: 10rem;
-    h2 {
-      position: relative;
-      top: 22%;
-    }
-    &::after {
-      content: "";
-      background: url('/images/background/backgroundNightHighway.jpeg') center;
-      background-size: cover;
-      opacity: 0.5;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      position: absolute;
-      z-index: -1;
-    }
-  }
-
   .v-available {
     font-size: larger;
     white-space: nowrap;
@@ -98,4 +75,30 @@
     }
   }
 
+}
+
+.trade-in .img,
+.inventory .img {
+  & {
+    background-size: cover;
+    background: rgba(0,0,0,0.5);
+    position: relative;
+    height: 10rem;
+    h2 {
+      position: relative;
+      top: 22%;
+    }
+    &::after {
+      content: "";
+      background: url('/images/background/backgroundNightHighway.jpeg') center;
+      background-size: cover;
+      opacity: 0.5;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      z-index: -1;
+    }
+  }
 }

@@ -24,3 +24,10 @@ export const TrTd = ({title, value}) => (
         </td>
     </tr>
 );
+
+export const TitleSeparator = () => (
+    <div className="separator">
+        <div className="first mr-1"></div>
+        <div className="second"></div>
+    </div>
+);

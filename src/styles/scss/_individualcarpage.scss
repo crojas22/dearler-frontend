@@ -130,11 +130,6 @@
           color: gray;
           font-weight: lighter;
         }
-        input {
-          &:focus {
-            background-color: white !important;
-          }
-        }
       }
     }
   }
@@ -156,4 +151,8 @@
     color: $primary-color;
     margin: 0 0.25rem 0.25rem 0;
   }
+}
+
+input:focus {
+  background-color: white !important;
 }

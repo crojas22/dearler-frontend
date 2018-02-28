@@ -1,8 +1,8 @@
 import React from 'react'
 import { NavLink } from "react-router-dom";
 
-export const BtnInput = ({title, classes, onClick, type, disabled}) => (
-    <button type={type} className={'btn rounded-0 ' + classes} onClick={onClick} disabled={disabled}>
+export const BtnInput = ({title, classes, onClick, type, disabled, data}) => (
+    <button type={type} className={'btn rounded-0 ' + classes} onClick={onClick} disabled={disabled} data-data={data}>
         {
             title
         }

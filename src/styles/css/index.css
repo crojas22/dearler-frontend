@@ -240,26 +240,6 @@ button:focus {
     color: white !important;
     background-color: rgba(255, 255, 255, 0.1); }
 
-.inventory > div:first-child {
-  background-size: cover;
-  background: rgba(0, 0, 0, 0.5);
-  position: relative;
-  height: 10rem; }
-  .inventory > div:first-child h2 {
-    position: relative;
-    top: 22%; }
-  .inventory > div:first-child::after {
-    content: "";
-    background: url("/images/background/backgroundNightHighway.jpeg") center;
-    background-size: cover;
-    opacity: 0.5;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    z-index: -1; }
-
 .inventory .v-available {
   font-size: larger;
   white-space: nowrap; }
@@ -320,6 +300,29 @@ button:focus {
   box-shadow: 0 1px 3px rgba(59, 62, 68, 0.3); }
   .inventory .options-selected > div:nth-of-type(2):hover {
     cursor: pointer; }
+
+.trade-in .img,
+.inventory .img {
+  background-size: cover;
+  background: rgba(0, 0, 0, 0.5);
+  position: relative;
+  height: 10rem; }
+  .trade-in .img h2,
+  .inventory .img h2 {
+    position: relative;
+    top: 22%; }
+  .trade-in .img::after,
+  .inventory .img::after {
+    content: "";
+    background: url("/images/background/backgroundNightHighway.jpeg") center;
+    background-size: cover;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1; }
 
 .search-options {
   margin-top: -3rem;
@@ -591,9 +594,6 @@ button:focus {
   color: gray;
   font-weight: lighter; }
 
-.individual-car-page .features-tab .contact-form form input:focus {
-  background-color: white !important; }
-
 .bread {
   border-bottom: 1px solid #ccc; }
   .bread li a {
@@ -606,6 +606,9 @@ button:focus {
 .compare svg {
   color: #cc601a;
   margin: 0 0.25rem 0.25rem 0; }
+
+input:focus {
+  background-color: white !important; }
 
 .search-inventory h2 > svg {
   margin: 0 0.50rem 0.30rem 0; }
@@ -723,6 +726,43 @@ button:focus {
     bottom: 0;
     opacity: 0; } }
 
+.trade-in .num {
+  height: 2rem !important;
+  width: 2rem;
+  line-height: 1.5;
+  border: 0.2rem solid #cc601a;
+  color: #cc601a; }
+
+.font-90 {
+  font-size: 0.90rem; }
+
+.bg-prime {
+  background-color: #cc601a; }
+
+.pointer {
+  cursor: pointer; }
+
+.border-bottom-5 {
+  border-bottom: 0.5rem solid #ccc; }
+
+.border-prime {
+  border-color: #cc601a; }
+
+.separator .first,
+.separator .second {
+  display: inline-block;
+  background-color: #cc601a;
+  transform: skew(-50deg, 0deg);
+  border-radius: 2px; }
+
+.separator .first {
+  height: 0.4rem !important;
+  width: 3rem; }
+
+.separator .second {
+  height: 0.4rem !important;
+  width: 1.5rem; }
+
 * {
   margin: 0;
   padding: 0;
@@ -739,7 +779,8 @@ a:hover {
   text-decoration: none; }
 
 a {
-  color: black; }
+  color: black;
+  white-space: nowrap; }
 
 .bg-grey {
   background-color: #e0e2e8; }
