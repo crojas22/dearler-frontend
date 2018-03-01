@@ -6,14 +6,33 @@
   <component name="ChangeListManager">
     <list default="true" id="e8a15d44-41bf-4971-af62-f81d9657f06e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/js/api/index.js" afterPath="$PROJECT_DIR$/src/js/api/index.js" />
-      <change beforePath="$PROJECT_DIR$/src/js/components/App.js" afterPath="$PROJECT_DIR$/src/js/components/App.js" />
-      <change beforePath="$PROJECT_DIR$/src/js/components/Navigation.js" afterPath="$PROJECT_DIR$/src/js/components/Navigation.js" />
-      <change beforePath="$PROJECT_DIR$/src/js/components/PreApproval.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/js/components/homepage/SpecialsCarousel.js" afterPath="$PROJECT_DIR$/src/js/components/homepage/SpecialsCarousel.js" />
-      <change beforePath="$PROJECT_DIR$/src/styles/css/index.css" afterPath="$PROJECT_DIR$/src/styles/css/index.css" />
-      <change beforePath="$PROJECT_DIR$/src/styles/scss/homepage/_specialscarousel.scss" afterPath="$PROJECT_DIR$/src/styles/scss/homepage/_specialscarousel.scss" />
-      <change beforePath="$PROJECT_DIR$/src/styles/scss/reusable/_snackbar.scss" afterPath="$PROJECT_DIR$/src/styles/scss/reusable/_snackbar.scss" />
+      <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" afterPath="$PROJECT_DIR$/build/asset-manifest.json" />
+      <change beforePath="$PROJECT_DIR$/build/index.html" afterPath="$PROJECT_DIR$/build/index.html" />
+      <change beforePath="$PROJECT_DIR$/build/service-worker.js" afterPath="$PROJECT_DIR$/build/service-worker.js" />
+      <change beforePath="$PROJECT_DIR$/build/static/css/main.03cf63e1.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/build/static/css/main.03cf63e1.css.gz" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/build/static/css/main.03cf63e1.css.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/0.6d158d08.chunk.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/0.6d158d08.chunk.js.gz" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/0.6d158d08.chunk.js.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/1.e4103366.chunk.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/1.e4103366.chunk.js.gz" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/1.e4103366.chunk.js.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/2.f1d094c5.chunk.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/2.f1d094c5.chunk.js.gz" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/2.f1d094c5.chunk.js.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/3.59a10e55.chunk.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/3.59a10e55.chunk.js.gz" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/3.59a10e55.chunk.js.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/4.4c2832ef.chunk.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/4.4c2832ef.chunk.js.gz" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/4.4c2832ef.chunk.js.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/5.5322f2a9.chunk.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/5.5322f2a9.chunk.js.gz" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/5.5322f2a9.chunk.js.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.486a5600.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.486a5600.js.gz" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.486a5600.js.map" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -66,7 +85,7 @@
         <entry file="file://$PROJECT_DIR$/src/js/components/Navigation.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="202">
-              <caret line="29" column="105" lean-forward="true" selection-start-line="29" selection-start-column="105" selection-end-line="29" selection-end-column="105" />
+              <caret line="29" column="105" lean-forward="false" selection-start-line="29" selection-start-column="105" selection-end-line="29" selection-end-column="105" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -78,7 +97,7 @@
         <entry file="file://$PROJECT_DIR$/src/js/components/IndividualCarPage.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="273">
-              <caret line="69" column="21" lean-forward="true" selection-start-line="69" selection-start-column="21" selection-end-line="69" selection-end-column="76" />
+              <caret line="69" column="21" lean-forward="false" selection-start-line="69" selection-start-column="21" selection-end-line="69" selection-end-column="76" />
               <folding />
             </state>
           </provider>
@@ -88,7 +107,7 @@
         <entry file="file://$PROJECT_DIR$/src/js/components/AboutUs.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
-              <caret line="14" column="23" lean-forward="true" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+              <caret line="14" column="23" lean-forward="false" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -462,7 +481,7 @@
       <workItem from="1517503848280" duration="68000" />
       <workItem from="1519235680150" duration="34347000" />
       <workItem from="1519426944415" duration="24670000" />
-      <workItem from="1519743291061" duration="36216000" />
+      <workItem from="1519743291061" duration="36400000" />
     </task>
     <task id="LOCAL-00001" summary="Update main page">
       <created>1517146564745</created>
@@ -475,10 +494,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="239937000" />
+    <option name="totallyTimeSpent" value="240121000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="249" y="116" width="1074" height="748" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -945,7 +965,7 @@
     <entry file="file://$PROJECT_DIR$/src/js/components/IndividualCarPage.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
-          <caret line="69" column="21" lean-forward="true" selection-start-line="69" selection-start-column="21" selection-end-line="69" selection-end-column="76" />
+          <caret line="69" column="21" lean-forward="false" selection-start-line="69" selection-start-column="21" selection-end-line="69" selection-end-column="76" />
           <folding />
         </state>
       </provider>
@@ -971,7 +991,7 @@
     <entry file="file://$PROJECT_DIR$/src/js/components/Navigation.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="202">
-          <caret line="29" column="105" lean-forward="true" selection-start-line="29" selection-start-column="105" selection-end-line="29" selection-end-column="105" />
+          <caret line="29" column="105" lean-forward="false" selection-start-line="29" selection-start-column="105" selection-end-line="29" selection-end-column="105" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -981,7 +1001,7 @@
     <entry file="file://$PROJECT_DIR$/src/js/components/AboutUs.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
-          <caret line="14" column="23" lean-forward="true" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+          <caret line="14" column="23" lean-forward="false" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
