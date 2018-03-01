@@ -29,8 +29,8 @@ const TradeIn = Loadable({
     loading: Loading
 });
 
-const PreApproval = Loadable({
-    loader: () => import("./PreApproval"),
+const About = Loadable({
+    loader: () => import("./AboutUs"),
     loading: Loading
 });
 
@@ -70,9 +70,9 @@ class App extends React.Component {
                     () => (<Inventory {...this.state} changePage={this.changePageNumber} resetPage={this.resetPage}/>)
                 }/>
                 <Route path='/inventory/:car' render={props => (<IndividualCarPage {...props}/>)}/>
-                <Route exact path="/financing/trade-in" component={TradeIn}/>
-                <Route exact path="/financing/pre-approval" component={PreApproval}/>
+                <Route exact path="/trade-in" component={TradeIn}/>
                 <Route path="/compare" component={Compare}/>
+                <Route path="/about-us" component={About}/>
             </Switch>
         );
     }

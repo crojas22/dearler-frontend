@@ -219,6 +219,9 @@ button:focus {
     color: #6c98e1;
     border-color: #6c98e1; }
 
+.no-collapse:empty:after {
+  content: "\00a0"; }
+
 .nav-tab-menu {
   padding: 0 0.85rem;
   display: flex;
@@ -702,7 +705,8 @@ input:focus {
   padding: 1rem;
   position: fixed;
   bottom: 1rem;
-  left: 45%;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 2000;
   visibility: hidden; }
   .inventory .snack-bar.show,

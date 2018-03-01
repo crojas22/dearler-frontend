@@ -8,7 +8,8 @@
   padding: 1rem;
   position: fixed;
   bottom: 1rem;
-  left: 45%;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 2000;
   visibility: hidden;
   &.show {

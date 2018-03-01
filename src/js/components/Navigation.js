@@ -2,7 +2,7 @@ import React from 'react';
 import PhoneContactInfo from "./navigation/PhoneContactInfo";
 import AddressInfo from "./navigation/AddressInfo";
 import { BtnInput } from "./reusables/Buttons";
-import { NavLink, withRouter } from "react-router-dom";
+import { NavLink, withRouter, Link } from "react-router-dom";
 import OnOff from "../hoc/OnOff";
 import { connect } from "react-redux";
 import MdViewCarousel from "react-icons/lib/md/view-carousel";
@@ -13,9 +13,9 @@ const Navigation = ({clickHandle, active, compareArray, clickDropDown, dropDown}
         <nav className="navigation">
             <div className="justify-content-between navbar navbar-expand-md navbar-dark bg-black py-3">
                 <div>
-                    <a className="navbar-brand my-1" >
-                        <img src="http://motors.stylemixthemes.com/wp-content/uploads/2015/12/logo.svg" alt="logo"/>
-                    </a>
+                    <Link to="/" className="navbar-brand my-1" >
+                        <img src="/images/background/logo.svg" alt="logo"/>
+                    </Link>
                     <div>
                         <PhoneContactInfo classes="d-md-none"/>
                     </div>
@@ -34,14 +34,14 @@ const Navigation = ({clickHandle, active, compareArray, clickDropDown, dropDown}
                         <li className="nav-item dropdown" onClick={() => clickDropDown("dropDown")} >
                             <a className="dropdown-toggle nav-link btn rounded-0 p-3 font-weight-bold">Financing</a>
                             <div className={"bg-light dropdown-menu p-0 m-0 border-0 rounded-0 " + (dropDown?"d-block":"")}>
-                                <NavLink to="/financing/pre-approval" className="nav-link p-3 border-top">
-                                    Application
-                                </NavLink>
-                                <NavLink to="/financing/trade-in" className="nav-link p-3 border-top border-bottom">
-                                    Sell vehicle
+                                <NavLink to="/trade-in" className="nav-link p-3 border-top border-bottom">
+                                    Trade in Vehicle
                                 </NavLink>
                             </div>
                         </li>
+                        <NavLink to="/about-us" className="nav-link btn rounded-0 p-3 font-weight-bold">
+                            About us
+                        </NavLink>
                     </ul>
                     <ul>
                         <NavLink to="/compare" className="btn d-block rounded-0 py-md-2 py-2 pl-3 pr-2">

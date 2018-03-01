@@ -2,6 +2,7 @@ import React from 'react';
 import { renderCarListing } from "../../functions/HelperFunctions";
 import { NavControls } from "../reusables/NavControls";
 import { TitleSeparator } from "../reusables/Div";
+import CarListing from "../reusables/CarListing";
 
 class SpecialsCarousel extends React.Component {
     constructor(props) {
@@ -47,22 +48,39 @@ class SpecialsCarousel extends React.Component {
     }
 
     render() {
-        const { displayFrom, displayTo, perPage } = this.state;
+        const { displayFrom, displayTo, perPage } = this.state,
+            arrayLength = this.props.newCars.length;
 
-        const arrayToDisplay = renderCarListing(this.props.newCars, "col-8 col-md-5 col-xl-3 mx-auto", "home-carousel-listing");
+        const displayArray = (array) => (
+            array.map((each, index) => {
+                if (index >= displayFrom && index < displayTo) {
+                    return(
+                        <div key={each.id} className="col-8 col-md-5 col-xl-3 mx-auto">
+                            <CarListing {...each} mainClass="home-carousel-listing"/>
+                        </div>
+                    )
+                } else {
+                    return(
+                        <div key={each.id} className="col-8 col-md-5 col-xl-3 mx-auto d-none">
+                            <CarListing {...each} mainClass="home-carousel-listing"/>
+                        </div>
+                    )
+                }
+            })
+        );
 
         const forward = () => {
             this.setState({
-                displayFrom: (displayFrom + perPage) % arrayToDisplay.length,
-                displayTo: ((displayTo % arrayToDisplay.length) + perPage)
+                displayFrom: (displayFrom + perPage) % arrayLength,
+                displayTo: ((displayTo % arrayLength) + perPage)
             });
         };
 
         const backward = () => {
             if (displayFrom === 0) {
                 this.setState({
-                    displayFrom: arrayToDisplay.length - perPage,
-                    displayTo: arrayToDisplay.length
+                    displayFrom: arrayLength - perPage,
+                    displayTo: arrayLength.length
                 });
             } else {
                 this.setState({
@@ -82,7 +100,7 @@ class SpecialsCarousel extends React.Component {
                 </div>
                 <div className="row d-flex vertical-align-center flex-nowrap">
                     {
-                        arrayToDisplay.slice(displayFrom, displayTo)
+                        displayArray(this.props.newCars)
                     }
                 </div>
                 <NavControls add={forward} remove={backward}/>
