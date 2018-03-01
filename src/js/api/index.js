@@ -1,5 +1,5 @@
-const apiUrl = "http://localhost:8080/api/";
-// const apiUrl = "https://dealer-back.herokuapp.com/api/";
+// const apiUrl = "http://localhost:8080/api/";
+const apiUrl = "https://dealer-back.herokuapp.com/api/";
 
 export const fetchDataApi = (url, method) => {
     return fetch(apiUrl + url, {

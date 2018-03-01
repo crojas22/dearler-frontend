@@ -5,34 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e8a15d44-41bf-4971-af62-f81d9657f06e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" afterPath="$PROJECT_DIR$/build/asset-manifest.json" />
-      <change beforePath="$PROJECT_DIR$/build/index.html" afterPath="$PROJECT_DIR$/build/index.html" />
-      <change beforePath="$PROJECT_DIR$/build/service-worker.js" afterPath="$PROJECT_DIR$/build/service-worker.js" />
-      <change beforePath="$PROJECT_DIR$/build/static/css/main.03cf63e1.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/static/css/main.03cf63e1.css.gz" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/static/css/main.03cf63e1.css.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/0.6d158d08.chunk.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/0.6d158d08.chunk.js.gz" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/0.6d158d08.chunk.js.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/1.e4103366.chunk.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/1.e4103366.chunk.js.gz" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/1.e4103366.chunk.js.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/2.f1d094c5.chunk.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/2.f1d094c5.chunk.js.gz" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/2.f1d094c5.chunk.js.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/3.59a10e55.chunk.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/3.59a10e55.chunk.js.gz" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/3.59a10e55.chunk.js.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/4.4c2832ef.chunk.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/4.4c2832ef.chunk.js.gz" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/4.4c2832ef.chunk.js.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/5.5322f2a9.chunk.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/5.5322f2a9.chunk.js.gz" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/5.5322f2a9.chunk.js.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.486a5600.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.486a5600.js.gz" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.486a5600.js.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/js/api/index.js" afterPath="$PROJECT_DIR$/src/js/api/index.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -103,7 +76,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AboutUs.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AboutUs.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/js/components/AboutUs.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
@@ -111,6 +84,16 @@
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/js/api/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="40" lean-forward="false" selection-start-line="0" selection-start-column="36" selection-end-line="0" selection-end-column="40" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -208,7 +191,6 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/server/bootstrap.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/js/api/index.js" />
         <option value="$PROJECT_DIR$/src/styles/scss/homepage/_specialscarousel.scss" />
         <option value="$PROJECT_DIR$/src/js/components/reusables/CarListing.js" />
         <option value="$PROJECT_DIR$/src/js/components/homepage/SpecialsCarousel.js" />
@@ -216,6 +198,7 @@
         <option value="$PROJECT_DIR$/src/js/components/App.js" />
         <option value="$PROJECT_DIR$/src/js/components/Navigation.js" />
         <option value="$PROJECT_DIR$/src/js/components/AboutUs.js" />
+        <option value="$PROJECT_DIR$/src/js/api/index.js" />
       </list>
     </option>
   </component>
@@ -299,6 +282,19 @@
               <item name="client" type="b2602c69:ProjectViewProjectNode" />
               <item name="client" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -481,7 +477,7 @@
       <workItem from="1517503848280" duration="68000" />
       <workItem from="1519235680150" duration="34347000" />
       <workItem from="1519426944415" duration="24670000" />
-      <workItem from="1519743291061" duration="36400000" />
+      <workItem from="1519743291061" duration="36782000" />
     </task>
     <task id="LOCAL-00001" summary="Update main page">
       <created>1517146564745</created>
@@ -494,7 +490,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="240121000" />
+    <option name="totallyTimeSpent" value="240503000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="249" y="116" width="1074" height="748" extended-state="0" />
@@ -511,7 +507,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26744187" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26744187" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32945737" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.249031" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -872,14 +868,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/api/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="41" lean-forward="false" selection-start-line="0" selection-start-column="38" selection-end-line="0" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/styles/scss/_homepage.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3">
@@ -1005,6 +993,14 @@
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/api/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="40" lean-forward="false" selection-start-line="0" selection-start-column="36" selection-end-line="0" selection-end-column="40" />
+          <folding />
         </state>
       </provider>
     </entry>
