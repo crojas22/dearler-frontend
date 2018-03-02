@@ -59,7 +59,7 @@ const WhyUs = () => (
             </div>
         </div>
         <div className="d-flex w-100 my-4">
-            <BtnLink title="LEARN MORE" to="/about-us" classes="btn-primary d-block mx-auto"/>
+            <BtnLink title="LEARN MORE" to="about-us" classes="btn-primary d-block mx-auto"/>
         </div>
     </div>
 );

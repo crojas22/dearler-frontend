@@ -71,7 +71,7 @@ const TradeIn = ({changeTab, tab, getValue, accident, interior, exterior, submit
                             </div>
                         </div>
                         <div className="col-lg-8">
-                            <div className="row">
+                            <div className="row mb-2">
                                 <TabSelector click={changeTab} num="1" current={tab}
                                              title="CAR INFORMATION" info="Add your vehicle details"/>
                                 <TabSelector click={changeTab} num="2" current={tab}

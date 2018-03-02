@@ -743,6 +743,9 @@ input:focus {
 .bg-prime {
   background-color: #cc601a; }
 
+.text-prime {
+  color: #cc601a; }
+
 .pointer {
   cursor: pointer; }
 
@@ -766,6 +769,16 @@ input:focus {
 .separator .second {
   height: 0.4rem !important;
   width: 1.5rem; }
+
+.max-w-1k {
+  max-width: 1030px !important; }
+
+.about-us svg {
+  margin: 0 0.30rem 0.30rem 0;
+  color: #cc601a; }
+
+.about-us li {
+  margin-bottom: 0.75rem; }
 
 * {
   margin: 0;
